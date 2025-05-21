@@ -1,7 +1,7 @@
-from db import get_db
-from log_generator import generate_log
-from integrity import verify_logs
-from analyzer import detect_anomalies
+from NoSQL.app.db import get_db
+from NoSQL.app.log_generator import generate_log
+from NoSQL.app.integrity import verify_logs
+from NoSQL.app.analyzer import detect_anomalies
 
 db = get_db()
 old_collection = db["utilisateurs"]

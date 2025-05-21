@@ -19,9 +19,14 @@ Ce projet est une démonstration d’un système de journalisation sécurisé pe
 
 ```bash
 journalisation-securisee/
-├── main.py                # Script principal
-├── db.py                  # Connexion à MongoDB
-├── log_generator.py       # Génération des logs + hachage SHA256
-├── integrity.py           # Vérification de l'intégrité des logs
-├── analyzer.py            # Détection d’anomalies (logs suspects)
-└── README.md              # Ce fichier
+├── app/
+│   ├── main.py                 # Point d'entrée principal (exécution complète du projet)
+│   ├── db.py                   # Connexion à MongoDB
+│   ├── log_generator.py        # Génération des logs avec hachage SHA256
+│   ├── integrity.py            # Vérification de l'intégrité des logs
+│   ├── analyzer.py             # Analyse d'anomalies dans les logs
+│   ├── requirements.txt        # Dépendances Python (Flask, pymongo, etc.)
+│   └── Dockerfile              # Fichier Docker pour construire l’image de l’application
+├── docker-compose.yml          # Démarrage automatique de MongoDB + app Python avec Docker
+├── README.md                   # Fichier de présentation du projet
+├── .gitignore     
